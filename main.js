@@ -27,14 +27,26 @@ for (let i = 0; randomNumbers.length < 5; i++) {
 }
 console.log(randomNumbers);
 
-const userNumbers = [];
-
 let userNumber;
+
+const userNumbers = [];
 
 setTimeout(function() {
     for (let i = 0; userNumbers.length < 5; i++) {
-       userNumber = Number(prompt("Inserisci i numeri"));
-    } if (!userNumbers.includes(userNumber)) {
-        userNumbers.push(randomNumber);
+        userNumber = Number(prompt("Inserisci numeri"));
+        if (!userNumbers.includes(userNumber)) {
+            userNumbers.push(userNumber);
+        } else {
+            console.log("numero già inserito, riprovare");
+        }
+    } 
+    if (userNumber === randomNumber) {
+        console.log("hai vinto");
+    } else {
+        console.log("hai perso");
     }
-}, 1000);
+
+}, 30 * 1000);
+
+console.log(userNumbers);
+
