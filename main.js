@@ -13,16 +13,6 @@
 
 /*---- FUNCTIONS ----*/
 
-function timer() {
-    let sec = 10;
-    let timer = setInterval(function() {
-        alert(randomNumbers);
-        if (sec < 0) {
-            clearInterval(timer);
-        }
-    }, 1000);
-}
-
 /*------ MAIN ------*/
 
 const randomNumbers = [];
@@ -37,14 +27,14 @@ for (let i = 0; randomNumbers.length < 5; i++) {
 }
 console.log(randomNumbers);
 
-// let clock = 10;
+const userNumbers = [];
 
-// const time = setInterval(function() {
-//     if (time === 0) {
-//         console.log("time-out");
-//         clearInterval(time);
-//     } else {
-//         alert(randomNumbers);
+let userNumber;
 
-//     }
-// }, 1000);
+setTimeout(function() {
+    for (let i = 0; userNumbers.length < 5; i++) {
+       userNumber = Number(prompt("Inserisci i numeri"));
+    } if (!userNumbers.includes(userNumber)) {
+        userNumbers.push(randomNumber);
+    }
+}, 1000);
